@@ -1,0 +1,155 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #edf2f9;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;
+    min-height: 450px;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px #cbd5e1;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px;
+    background: #3156c8;
+    color: white;
+}
+
+.chat-header h1 {
+    margin: 0 0 6px;
+    font-size: 22px;
+}
+
+.chat-header p {
+    margin: 0;
+    font-size: 13px;
+}
+
+button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #3156c8;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 18px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.message {
+    max-width: 85%;
+    padding: 12px 15px;
+    border-radius: 12px;
+    overflow-wrap: anywhere;
+}
+
+.message p {
+    margin: 5px 0 0;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.sender {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.bot {
+    align-self: flex-start;
+    background: #edf2f9;
+    color: #243047;
+    border-bottom-left-radius: 3px;
+}
+
+.user {
+    align-self: flex-end;
+    background: #3156c8;
+    color: white;
+    border-bottom-right-radius: 3px;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.chat-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.chat-input input:focus {
+    outline: 2px solid #3156c8;
+}
+
+.chat-input button {
+    background: #3156c8;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+
+    .chat-container {
+        height: 90vh;
+    }
+
+    .chat-header {
+        padding: 14px;
+    }
+
+    .chat-header h1 {
+        font-size: 19px;
+    }
+
+    .chat-box {
+        padding: 12px;
+    }
+
+    .chat-input {
+        padding: 10px;
+    }
+}
